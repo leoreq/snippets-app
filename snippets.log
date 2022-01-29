@@ -1,2 +1,3 @@
 ERROR:root:FIXME: unimplemented - put('list','a sequence of things created by us'
 ERROR:root:FIXME: Unimplemented - get('list')
+ERROR:root:FIXME: Unimplementer - delete('coca')
