@@ -1,8 +1,17 @@
-import logging
+import logging, argparse
 
 #Set the log output file, and the log level
 
 logging.basicConfig(filename="snippets.log",level=logging.DEBUG)
+
+def main():
+    """Main Function"""
+    logging.info("Constructing Parser")
+    parser =argparse.ArgumentParser(description="Store and retrieve snipets of text")
+    arguments=parser.parse_args()
+
+if __name__=="__main__":
+    main()
 
 def put(name,snippet):
     """
@@ -46,4 +55,4 @@ def update(name,snippet):
     logging.error("FIXME: unimplemented - update({!r},{!r})".format(name,snippet))
 
     return name,snippet
-    
+
