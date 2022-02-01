@@ -4,24 +4,7 @@ import logging, argparse
 
 logging.basicConfig(filename="snippets.log",level=logging.DEBUG)
 
-def main():
-    """Main Function"""
-    logging.info("Constructing Parser")
-    parser =argparse.ArgumentParser(description="Store and retrieve snipets of text")
 
-    subparsers=parser.add_subparsers(dest="command",help="Available Commands")
-
-    #Subparser for the put command
-    logging.debug("Constructing put subparser")
-    put_parser=subparsers.add_parser("put",help="Store a snippet")
-    put_parser.add_argument("name",help="Name of the snippet")
-    put_parser.add_argument("snippet",help="snippet text")
-
-
-    arguments=parser.parse_args()
-
-if __name__=="__main__":
-    main()
 
 def put(name,snippet):
     """
@@ -30,7 +13,6 @@ def put(name,snippet):
     Returns the name and the snippet
     """
     logging.error("FIXME: unimplemented - put({!r},{!r})".format(name,snippet))
-
     return name,snippet
 
 def get(name):
@@ -66,3 +48,35 @@ def update(name,snippet):
 
     return name,snippet
 
+def main():
+    """Main Function"""
+    logging.info("Constructing Parser")
+    parser =argparse.ArgumentParser(description="Store and retrieve snipets of text")
+
+    subparsers=parser.add_subparsers(dest="command",help="Available Commands")
+
+    #Subparser for the put command
+    logging.debug("Constructing put subparser")
+    put_parser=subparsers.add_parser("put",help="Store a snippet")
+    put_parser.add_argument("name",help="Name of the snippet")
+    put_parser.add_argument("snippet",help="snippet text")
+
+    #Subparser for the get command
+    logging.debug("Constructing get subparser")
+    put_parser=subparsers.add_parser("get",help="Retrieve a snippet")
+    put_parser.add_argument("name",help="Name of the snippet that will be retrieved")
+
+    arguments=parser.parse_args()
+    #Convert parsed arguments from Namespace to Dictionary
+    arguments=vars(arguments)
+    command=arguments.pop("command")
+
+    if command=="put":
+        name,snippet=put(**arguments)
+        print("Stored {!r} as {!r}".format(snippet,name))
+    elif command=="get":
+        snippet=get(**arguments)
+        print("Retrieved snippet:{!r}".format(snippet))
+
+if __name__=="__main__":
+    main()
