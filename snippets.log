@@ -1,52 +1,86 @@
-ERROR:root:FIXME: unimplemented - put('list','a sequence of things created by us'
-ERROR:root:FIXME: Unimplemented - get('list')
-ERROR:root:FIXME: Unimplementer - delete('coca')
-INFO:root:Constructing Parser
-INFO:root:Constructing Parser
-DEBUG:root:Constructing put subparser
-INFO:root:Constructing Parser
-DEBUG:root:Constructing put subparser
-INFO:root:Constructing Parser
-DEBUG:root:Constructing put subparser
-INFO:root:Constructing Parser
-DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
 INFO:root:Constructing Parser
 DEBUG:root:Constructing put subparser
 DEBUG:root:Constructing get subparser
+INFO:root:Storing snippet 'test','this is a test'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
 INFO:root:Constructing Parser
 DEBUG:root:Constructing put subparser
 DEBUG:root:Constructing get subparser
+INFO:root:Storing snippet 'test2','this is a test 2'
+DEBUG:root:Snippet stored succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
 INFO:root:Constructing Parser
 DEBUG:root:Constructing put subparser
 DEBUG:root:Constructing get subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
 INFO:root:Constructing Parser
 DEBUG:root:Constructing put subparser
 DEBUG:root:Constructing get subparser
+INFO:root:Retrieving snippet 'test'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
 INFO:root:Constructing Parser
 DEBUG:root:Constructing put subparser
 DEBUG:root:Constructing get subparser
+INFO:root:Retrieving snippet 'test'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
 INFO:root:Constructing Parser
 DEBUG:root:Constructing put subparser
 DEBUG:root:Constructing get subparser
+INFO:root:Retrieving snippet 'test'
+DEBUG:root:Snippet retrieved succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
 INFO:root:Constructing Parser
 DEBUG:root:Constructing put subparser
 DEBUG:root:Constructing get subparser
+INFO:root:Retrieving snippet 'test'
+DEBUG:root:Snippet retrieved succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
 INFO:root:Constructing Parser
 DEBUG:root:Constructing put subparser
 DEBUG:root:Constructing get subparser
+INFO:root:Retrieving snippet 'test'
+DEBUG:root:Snippet retrieved succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
 INFO:root:Constructing Parser
 DEBUG:root:Constructing put subparser
 DEBUG:root:Constructing get subparser
+INFO:root:Retrieving snippet 'test'
+DEBUG:root:Snippet retrieved succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
 INFO:root:Constructing Parser
 DEBUG:root:Constructing put subparser
 DEBUG:root:Constructing get subparser
-ERROR:root:FIXME: unimplemented - put('algo','algo mas raro')
-ERROR:root:FIXME: unimplemented - put('algo','algo mas raro')
-ERROR:root:FIXME: Unimplemented - get('algo')
+INFO:root:Retrieving snippet 'test'
+DEBUG:root:Snippet retrieved succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
 INFO:root:Constructing Parser
 DEBUG:root:Constructing put subparser
 DEBUG:root:Constructing get subparser
+INFO:root:Retrieving snippet 'test'
+DEBUG:root:Snippet retrieved succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
 INFO:root:Constructing Parser
 DEBUG:root:Constructing put subparser
 DEBUG:root:Constructing get subparser
-ERROR:root:FIXME: unimplemented - put('prueba','prueba de snippet')
+INFO:root:Retrieving snippet 'test'
+DEBUG:root:Snippet retrieved succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+INFO:root:Retrieving snippet 'test'
+DEBUG:root:Snippet 'this is a test'  retrieved succesfully
