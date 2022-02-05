@@ -203,3 +203,18 @@ DEBUG:root:Constructing put subparser
 DEBUG:root:Constructing get subparser
 INFO:root:Retrieving snippet 'horny2'
 DEBUG:root:No snippet was found in database with 'horny2' name
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+INFO:root:Storing snippet 'saxy','wrongly said'
+DEBUG:root:Snippet stored succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Retrieving snippet 'dado'
+DEBUG:root:No snippet was found in database with 'dado' name
+INFO:root:Storing snippet 'carajo','esto es un insulto'
+DEBUG:root:Snippet stored succesfully
+INFO:root:Retrieving snippet 'carajo'
+DEBUG:root:Snippet 'esto es un insulto'  retrieved succesfully
