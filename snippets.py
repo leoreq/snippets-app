@@ -15,6 +15,16 @@ def put(name,snippet):
     Returns the name and the snippet
     """
     logging.info("Storing snippet {!r},{!r}".format(name,snippet))
+    with connection,connection.cursor() as cursor:
+        try:
+            cursor.execute("insert into snippets values (%s,%s)",(name,snippet))
+            logging.debug("Snippet stored succesfully")
+        except psycopg2.IntegrityError as e:
+            connection.rollback()
+            cursor.execute("update snippets set message =%s where keyword=%s",(snippet,name))
+            logging.debug("Snippet updated succesfully")
+
+    """
     cursor=connection.cursor()
     try:
         command="insert into snippets values (%s,%s)"
@@ -26,6 +36,7 @@ def put(name,snippet):
         cursor.execute(command,(snippet,name))
         logging.debug("Snippet updated succesfully")
     connection.commit()
+    """
 
    
 
@@ -62,25 +73,20 @@ def delete(name):
     Return 'Snippet Deleted Succesfuly'
     """
     logging.info("Deleting snippet {!r}".format(name))
-    cursor=connection.cursor()
+    with connection, connection.cursor() as cursor:
+        cursor.execute("select keyword from snippets where keyword =%s",(name,))
+        row=cursor.fetchone()
 
-    command="select keyword from snippets where keyword =%s"
-    cursor.execute(command,(name,))
-    row=cursor.fetchone()
-    connection.commit()
-    if not row:
-        #No snippet was foud  with the name
-        logging.debug("No record was found in database with {!r} name".format(name))
-        message="404: Snippet not found"
-        return message
-
-    command="delete from snippets where keyword =%s"
-    cursor.execute(command,(name,))
-    logging.debug("Snippet with name = {!r} was found and deleted".format(name))
-    message="Snippet with name = {!r} was found and deleted".format(name)
-    connection.commit()
-
-    logging.debug("Passing arguments to main function")
+        if not row:
+            #No snippet was foud  with the name
+            logging.debug("No record was found in database with {!r} name".format(name))
+            message="404: Snippet not found"
+            return message
+        
+        cursor.execute("delete from snippets where keyword =%s",(name,))
+        logging.debug("Snippet with name = {!r} was found and deleted".format(name))
+        message="Snippet with name = {!r} was found and deleted".format(name)
+        logging.debug("Passing arguments to main function")
     return message
 
 def update(name,snippet):

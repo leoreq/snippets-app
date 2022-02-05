@@ -431,3 +431,108 @@ DEBUG:root:Constructing get subparser
 DEBUG:root:Constructing delete subparser
 INFO:root:Retrieving snippet 'locas'
 DEBUG:root:No snippet was found in database with 'locas' name
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+INFO:root:Storing snippet 'something','this is a thing'
+DEBUG:root:Snippet stored succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+INFO:root:Storing snippet 'something','this is another thing'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+INFO:root:Storing snippet 'something','this is another thing'
+DEBUG:root:Snippet updated succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+INFO:root:Storing snippet 'something','this is really another thing'
+DEBUG:root:Snippet updated succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+INFO:root:Retrieving snippet 'something'
+DEBUG:root:Snippet 'this is really another thing'  retrieved succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+INFO:root:Deleting snippet 'something'
+DEBUG:root:Snippet with name = 'something' was found and deleted
+DEBUG:root:Passing arguments to main function
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+INFO:root:Retrieving snippet 'something'
+DEBUG:root:No snippet was found in database with 'something' name
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+INFO:root:Storing snippet 'something','this is really another thing'
+DEBUG:root:Snippet stored succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+INFO:root:Retrieving snippet 'something'
+DEBUG:root:Snippet 'this is really another thing'  retrieved succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+INFO:root:Storing snippet 'something','this is really another thing'
+DEBUG:root:Snippet updated succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+INFO:root:Retrieving snippet 'something'
+DEBUG:root:Snippet 'this is really another thing'  retrieved succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+INFO:root:Deleting snippet 'something'
+DEBUG:root:Snippet with name = 'something' was found and deleted
+DEBUG:root:Passing arguments to main function
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+INFO:root:Deleting snippet 'something'
+DEBUG:root:No record was found in database with 'something' name
