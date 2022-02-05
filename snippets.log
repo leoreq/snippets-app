@@ -84,3 +84,122 @@ DEBUG:root:Constructing put subparser
 DEBUG:root:Constructing get subparser
 INFO:root:Retrieving snippet 'test'
 DEBUG:root:Snippet 'this is a test'  retrieved succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+INFO:root:Storing snippet 'sexy','that is the name of the game'
+DEBUG:root:Snippet stored succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+INFO:root:Retrieving snippet 'sexy'
+DEBUG:root:Snippet 'that is the name of the game'  retrieved succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+INFO:root:Retrieving snippet 'horny'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+INFO:root:Retrieving snippet 'sexy'
+DEBUG:root:Snippet 'that is the name of the game'  retrieved succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+INFO:root:Retrieving snippet 'sexy'
+DEBUG:root:Snippet 'that is the name of the game'  retrieved succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+INFO:root:Retrieving snippet 'sexy'
+DEBUG:root:Snippet 'that is the name of the game'  retrieved succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+INFO:root:Retrieving snippet 'sexy'
+DEBUG:root:Snippet 'that is the name of the game'  retrieved succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+INFO:root:Retrieving snippet 'sexy'
+DEBUG:root:Snippet 'that is the name of the game'  retrieved succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+INFO:root:Retrieving snippet 'horny'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+INFO:root:Retrieving snippet 'horny'
+DEBUG:root:No snippet was found in database with 'horny' name
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+INFO:root:Storing snippet 'horny','is the other name of the game'
+DEBUG:root:Snippet stored succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+INFO:root:Retrieving snippet 'horny'
+DEBUG:root:Snippet 'is the other name of the game'  retrieved succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+INFO:root:Retrieving snippet 'horny2'
+DEBUG:root:No snippet was found in database with 'horny2' name

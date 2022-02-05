@@ -36,10 +36,17 @@ def get(name):
     command="select message from snippets where keyword =%s"
     cursor.execute(command,(name,))
     
-    object=cursor.fetchone()
+    row=cursor.fetchone()
+    connection.commit()
 
-    logging.debug("Snippet {!r}  retrieved succesfully".format(object[0]))
-    return "You have retrieved {!r} from keyword {!r} ".format(object[0],name)
+    
+    if not row:
+        #No snippet was foud  with the name
+        logging.debug("No snippet was found in database with {!r} name".format(name))
+        return "404: Snippet not found"
+
+    logging.debug("Snippet {!r}  retrieved succesfully".format(row[0]))
+    return row[0]
 
 def delete(name):
     """
