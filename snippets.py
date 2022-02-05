@@ -16,11 +16,18 @@ def put(name,snippet):
     """
     logging.info("Storing snippet {!r},{!r}".format(name,snippet))
     cursor=connection.cursor()
-    command="insert into snippets values (%s,%s)"
-    cursor.execute(command,(name,snippet))
+    try:
+        command="insert into snippets values (%s,%s)"
+        cursor.execute(command,(name,snippet))
+        logging.debug("Snippet stored succesfully")
+    except psycopg2.IntegrityError as e:
+        connection.rollback()
+        command="update snippets set message =%s where keyword=%s"
+        cursor.execute(command,(snippet,name))
+        logging.debug("Snippet updated succesfully")
     connection.commit()
 
-    logging.debug("Snippet stored succesfully")
+   
 
     return name,snippet
 
@@ -56,8 +63,27 @@ def delete(name):
 
     Return 'Snippet Deleted Succesfuly'
     """
-    logging.error("FIXME: Unimplementer - delete({!r})".format(name))
-    return " "
+    logging.info("Deleting snippet {!r}".format(name))
+    cursor=connection.cursor()
+
+    command="select keyword from snippets where keyword =%s"
+    cursor.execute(command,(name,))
+    row=cursor.fetchone()
+    connection.commit()
+    if not row:
+        #No snippet was foud  with the name
+        logging.debug("No record was found in database with {!r} name".format(name))
+        message="404: Snippet not found"
+        return message
+
+    command="delete from snippets where keyword =%s"
+    cursor.execute(command,(name,))
+    logging.debug("Snippet with name = {!r} was found and deleted".format(name))
+    message="Snippet with name = {!r} was found and deleted".format(name)
+    connection.commit()
+
+    logging.debug("Passing arguments to main function")
+    return message
 
 def update(name,snippet):
     """
@@ -89,6 +115,11 @@ def main():
     put_parser=subparsers.add_parser("get",help="Retrieve a snippet")
     put_parser.add_argument("name",help="Name of the snippet that will be retrieved")
 
+    #Subparser for the delete command
+    logging.debug("Constructing delete subparser")
+    delete_parser=subparsers.add_parser("delete",help="Delete a snippet")
+    delete_parser.add_argument("name",help="Name of the snippet that will be deleted")
+
     arguments=parser.parse_args()
     #Convert parsed arguments from Namespace to Dictionary
     arguments=vars(arguments)
@@ -100,6 +131,9 @@ def main():
     elif command=="get":
         snippet=get(**arguments)
         print("Retrieved snippet:{!r}".format(snippet))
+    elif command=="delete":
+        message2=delete(**arguments)
+        print("{!r}".format(message2))
 
 if __name__=="__main__":
     main()
