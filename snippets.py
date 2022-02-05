@@ -99,6 +99,18 @@ def catalog():
         rows=cursor.fetchall()
     return rows
 
+def search(name_string):
+    """
+    This function will retrieve all items from the catalog that match the name_string name
+    """
+    logging.info("Retrieving catalog of all names that match search function")
+    name_string="%"+name_string+"%"
+    with connection, connection.cursor() as cursor:
+        #print("select keyword from snippets where keyword like {!r} order by keyword".format(name_string))
+        cursor.execute("select keyword from snippets where keyword like %s order by keyword",(name_string,))
+        rows=cursor.fetchall()
+    return rows
+
 def update(name,snippet):
     """
     Update a snippet with an associated name.
@@ -137,6 +149,11 @@ def main():
     #Subparser for the catalog command
     logging.debug("Constructing catalog subparser")
     delete_parser=subparsers.add_parser("catalog",help="Display a catalog of snippets names")
+
+    #Subparser for the search command
+    logging.debug("Constructing search subparser")
+    delete_parser=subparsers.add_parser("search",help="Display a list of snippet names that match the search name_string")
+    delete_parser.add_argument("name_string",help="Search term that will be retrieved")
     
 
     arguments=parser.parse_args()
@@ -162,6 +179,16 @@ def main():
         print("The following is the catalog of items: \n")
         print("{!r} \n ".format(list_items))
         print("Use the get() function to retrieve the list \n")
+        print(" =========================================")
+    elif command=="search":
+        rows2=search(**arguments)
+        list_items=[]
+        for item in rows2:
+            list_items.append(item[0])
+        print(" =========================================\n")
+        print("The following is the list of items that match the search term: \n")
+        print("{!r} \n ".format(list_items))
+        print("Use the get() function to retrieve the snippet for each name \n")
         print(" =========================================")
 
 if __name__=="__main__":
