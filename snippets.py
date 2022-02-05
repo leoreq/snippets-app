@@ -89,6 +89,16 @@ def delete(name):
         logging.debug("Passing arguments to main function")
     return message
 
+def catalog():
+    """
+    This function will retrieve all items from the catalog and display them 
+    """
+    logging.info("Retrieving catalog of all names")
+    with connection, connection.cursor() as cursor:
+        cursor.execute("select keyword from snippets order by keyword",())
+        rows=cursor.fetchall()
+    return rows
+
 def update(name,snippet):
     """
     Update a snippet with an associated name.
@@ -124,6 +134,11 @@ def main():
     delete_parser=subparsers.add_parser("delete",help="Delete a snippet")
     delete_parser.add_argument("name",help="Name of the snippet that will be deleted")
 
+    #Subparser for the catalog command
+    logging.debug("Constructing catalog subparser")
+    delete_parser=subparsers.add_parser("catalog",help="Display a catalog of snippets names")
+    
+
     arguments=parser.parse_args()
     #Convert parsed arguments from Namespace to Dictionary
     arguments=vars(arguments)
@@ -138,6 +153,16 @@ def main():
     elif command=="delete":
         message2=delete(**arguments)
         print("{!r}".format(message2))
+    elif command=="catalog":
+        rows2=catalog(**arguments)
+        list_items=[]
+        for item in rows2:
+            list_items.append(item[0])
+        print(" =========================================\n")
+        print("The following is the catalog of items: \n")
+        print("{!r} \n ".format(list_items))
+        print("Use the get() function to retrieve the list \n")
+        print(" =========================================")
 
 if __name__=="__main__":
     main()

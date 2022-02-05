@@ -536,3 +536,190 @@ DEBUG:root:Constructing get subparser
 DEBUG:root:Constructing delete subparser
 INFO:root:Deleting snippet 'something'
 DEBUG:root:No record was found in database with 'something' name
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+INFO:root:Retrieving catalog of all names
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+INFO:root:Retrieving catalog of all names
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+INFO:root:Retrieving catalog of all names
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+INFO:root:Retrieving catalog of all names
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+INFO:root:Retrieving catalog of all names
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+INFO:root:Retrieving catalog of all names
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+INFO:root:Retrieving catalog of all names
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+INFO:root:Retrieving catalog of all names
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+INFO:root:Retrieving catalog of all names
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+INFO:root:Retrieving catalog of all names
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+INFO:root:Storing snippet 'saxy','this is a new entry'
+DEBUG:root:Snippet updated succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+INFO:root:Retrieving catalog of all names
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+INFO:root:Retrieving catalog of all names
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+INFO:root:Retrieving catalog of all names
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+INFO:root:Retrieving snippet 'horny'
+DEBUG:root:Snippet 'is the other name of the game'  retrieved succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+INFO:root:Retrieving snippet 'imbecil'
+DEBUG:root:Snippet 'este es UN NUEVO INSULTO'  retrieved succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+INFO:root:Retrieving snippet 'imbecil2'
+DEBUG:root:No snippet was found in database with 'imbecil2' name
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+INFO:root:Deleting snippet 'imbecil'
+DEBUG:root:Snippet with name = 'imbecil' was found and deleted
+DEBUG:root:Passing arguments to main function
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+INFO:root:Deleting snippet 'imbecil'
+DEBUG:root:No record was found in database with 'imbecil' name
