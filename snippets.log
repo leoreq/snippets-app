@@ -401,3 +401,33 @@ DEBUG:root:Constructing get subparser
 DEBUG:root:Constructing delete subparser
 INFO:root:Retrieving snippet 'saxo'
 DEBUG:root:Snippet 'un instrumentaso increible'  retrieved succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+INFO:root:Storing snippet 'loca','this is a crazy person'
+DEBUG:root:Snippet stored succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+INFO:root:Retrieving snippet 'loca'
+DEBUG:root:Snippet 'this is a crazy person'  retrieved succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+INFO:root:Retrieving snippet 'locas'
+DEBUG:root:No snippet was found in database with 'locas' name
