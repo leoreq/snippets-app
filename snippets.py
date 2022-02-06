@@ -21,7 +21,7 @@ def put(name,snippet,hidden_status):
             logging.debug("Snippet stored succesfully")
         except psycopg2.IntegrityError as e:
             connection.rollback()
-            cursor.execute("update snippets set message =%s where keyword=%s",(snippet,name))
+            cursor.execute("update snippets set message =%s , hidden_status = %s where keyword=%s",(snippet,hidden_status,name))
             logging.debug("Snippet updated succesfully")
 
     """
@@ -40,7 +40,7 @@ def put(name,snippet,hidden_status):
 
    
 
-    return name,snippet
+    return name,snippet,hidden_status
 
 def get(name):
     """Retrieve the snippet with the given name.
@@ -162,14 +162,10 @@ def main():
     #Convert parsed arguments from Namespace to Dictionary
     arguments=vars(arguments)
     command=arguments.pop("command")
-    print(command)
+    
     if command=="put":
-        
-        name,snippet=put(**arguments)
-        print(name)
-        print(snippet)
-        #print(hidden_status)
-        print("Stored {!r} as {!r} with status as ".format(snippet,name))
+        name,snippet,hidden_status=put(**arguments)
+        print("Stored {!r} as {!r} with status as {!r}".format(snippet,name,hidden_status))
     elif command=="get":
         snippet=get(**arguments)
         print("Retrieved snippet:{!r}".format(snippet))

@@ -1298,3 +1298,72 @@ DEBUG:root:Constructing catalog subparser
 DEBUG:root:Constructing search subparser
 INFO:root:Retrieving snippet 'la mafer es cool'
 DEBUG:root:Snippet 'es cosa de mafer'  retrieved succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+DEBUG:root:Constructing search subparser
+INFO:root:Storing snippet 'another','another text of hidden string',True
+DEBUG:root:Snippet stored succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+DEBUG:root:Constructing search subparser
+INFO:root:Storing snippet 'another2','this will not be hidden',False
+DEBUG:root:Snippet stored succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+DEBUG:root:Constructing search subparser
+INFO:root:Storing snippet 'another2','this will not be hidden',False
+DEBUG:root:Snippet updated succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+DEBUG:root:Constructing search subparser
+INFO:root:Storing snippet 'another2','this will not be hidden',True
+DEBUG:root:Snippet updated succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+DEBUG:root:Constructing search subparser
+INFO:root:Storing snippet 'another2','this will not be hidden',True
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+DEBUG:root:Constructing search subparser
+INFO:root:Storing snippet 'another2','this will not be hidden',True
+DEBUG:root:Snippet updated succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database Conection Established
+INFO:root:Constructing Parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing delete subparser
+DEBUG:root:Constructing catalog subparser
+DEBUG:root:Constructing search subparser
+INFO:root:Storing snippet 'another2','this will not be hidden',False
+DEBUG:root:Snippet updated succesfully
