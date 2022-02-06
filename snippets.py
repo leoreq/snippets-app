@@ -156,7 +156,7 @@ def main():
     #Subparser for the catalog command
     logging.debug("Constructing catalog subparser")
     catalog_parser=subparsers.add_parser("catalog",help="Display a catalog of snippets names")
-    catalog_parser.add_argument('-t','--catalog_type', action='store', choices=['nombres', 'completo'],help="Elige la forma de mostrar el catalogo")
+    catalog_parser.add_argument('-t','--catalog_type', action='store', choices=['nombres', 'completo'],default='nombres',help="Elige la forma de mostrar el catalogo")
 
     #Subparser for the search command
     logging.debug("Constructing search subparser")
