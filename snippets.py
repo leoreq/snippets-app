@@ -8,16 +8,16 @@ logging.debug("Connecting to PostgreSQL")
 connection = psycopg2.connect(database="snippets2")
 logging.debug("Database Conection Established")
 
-def put(name,snippet,status):
+def put(name,snippet,hidden_status):
     """
     Store a snippet with an associated name.
 
     Returns the name and the snippet
     """
-    logging.info("Storing snippet {!r},{!r}".format(name,snippet))
+    logging.info("Storing snippet {!r},{!r},{!r}".format(name,snippet,hidden_status))
     with connection,connection.cursor() as cursor:
         try:
-            cursor.execute("insert into snippets values (%s,%s)",(name,snippet))
+            cursor.execute("insert into snippets values (%s,%s,%s)",(name,snippet,hidden_status))
             logging.debug("Snippet stored succesfully")
         except psycopg2.IntegrityError as e:
             connection.rollback()
@@ -135,7 +135,7 @@ def main():
     put_parser=subparsers.add_parser("put",help="Store a snippet")
     put_parser.add_argument("name",help="Name of the snippet")
     put_parser.add_argument("snippet",help="snippet text")
-    put_parser.add_argument("-hi","--hidden", action="store_true",help="will make sure the string is hidden",)
+    put_parser.add_argument("-i","--hidden_status", action="store_true",help="will make sure the string is hidden")
 
     #Subparser for the get command
     logging.debug("Constructing get subparser")
@@ -164,11 +164,12 @@ def main():
     command=arguments.pop("command")
     print(command)
     if command=="put":
-        name,snippet,status=put(**arguments)
+        
+        name,snippet=put(**arguments)
         print(name)
         print(snippet)
-        print(status)
-        print("Stored {!r} as {!r} with status as {!r}".format(snippet,name,status))
+        #print(hidden_status)
+        print("Stored {!r} as {!r} with status as ".format(snippet,name))
     elif command=="get":
         snippet=get(**arguments)
         print("Retrieved snippet:{!r}".format(snippet))
