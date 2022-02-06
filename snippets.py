@@ -8,7 +8,7 @@ logging.debug("Connecting to PostgreSQL")
 connection = psycopg2.connect(database="snippets2")
 logging.debug("Database Conection Established")
 
-def put(name,snippet):
+def put(name,snippet,status):
     """
     Store a snippet with an associated name.
 
@@ -135,11 +135,13 @@ def main():
     put_parser=subparsers.add_parser("put",help="Store a snippet")
     put_parser.add_argument("name",help="Name of the snippet")
     put_parser.add_argument("snippet",help="snippet text")
+    put_parser.add_argument("-hi","--hidden", action="store_true",help="will make sure the string is hidden",)
 
     #Subparser for the get command
     logging.debug("Constructing get subparser")
-    put_parser=subparsers.add_parser("get",help="Retrieve a snippet")
-    put_parser.add_argument("name",help="Name of the snippet that will be retrieved")
+    get_parser=subparsers.add_parser("get",help="Retrieve a snippet")
+    get_parser.add_argument("name",help="Name of the snippet that will be retrieved")
+
 
     #Subparser for the delete command
     logging.debug("Constructing delete subparser")
@@ -148,22 +150,25 @@ def main():
 
     #Subparser for the catalog command
     logging.debug("Constructing catalog subparser")
-    delete_parser=subparsers.add_parser("catalog",help="Display a catalog of snippets names")
+    catalog_parser=subparsers.add_parser("catalog",help="Display a catalog of snippets names")
 
     #Subparser for the search command
     logging.debug("Constructing search subparser")
-    delete_parser=subparsers.add_parser("search",help="Display a list of snippet names that match the search name_string")
-    delete_parser.add_argument("name_string",help="Search term that will be retrieved")
+    search_parser=subparsers.add_parser("search",help="Display a list of snippet names that match the search name_string")
+    search_parser.add_argument("name_string",help="Search term that will be retrieved")
     
 
     arguments=parser.parse_args()
     #Convert parsed arguments from Namespace to Dictionary
     arguments=vars(arguments)
     command=arguments.pop("command")
-
+    print(command)
     if command=="put":
-        name,snippet=put(**arguments)
-        print("Stored {!r} as {!r}".format(snippet,name))
+        name,snippet,status=put(**arguments)
+        print(name)
+        print(snippet)
+        print(status)
+        print("Stored {!r} as {!r} with status as {!r}".format(snippet,name,status))
     elif command=="get":
         snippet=get(**arguments)
         print("Retrieved snippet:{!r}".format(snippet))
