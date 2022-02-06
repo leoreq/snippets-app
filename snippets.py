@@ -89,15 +89,20 @@ def delete(name):
         logging.debug("Passing arguments to main function")
     return message
 
-def catalog():
+def catalog(catalog_type):
     """
     This function will retrieve all items from the catalog and display them 
     """
     logging.info("Retrieving catalog of all names")
     with connection, connection.cursor() as cursor:
-        cursor.execute("select keyword from snippets order by keyword",())
-        rows=cursor.fetchall()
-    return rows
+        if catalog_type == 'nombres':
+            cursor.execute("select keyword from snippets order by keyword",())
+            rows=cursor.fetchall()
+            return rows,catalog_type
+        elif catalog_type == 'completo':
+            cursor.execute("select * from snippets order by keyword",())
+            rows=cursor.fetchall()
+    return rows,catalog_type
 
 def search(name_string):
     """
@@ -151,6 +156,7 @@ def main():
     #Subparser for the catalog command
     logging.debug("Constructing catalog subparser")
     catalog_parser=subparsers.add_parser("catalog",help="Display a catalog of snippets names")
+    catalog_parser.add_argument('-t','--catalog_type', action='store', choices=['nombres', 'completo'],help="Elige la forma de mostrar el catalogo")
 
     #Subparser for the search command
     logging.debug("Constructing search subparser")
@@ -173,15 +179,23 @@ def main():
         message2=delete(**arguments)
         print("{!r}".format(message2))
     elif command=="catalog":
-        rows2=catalog(**arguments)
+        rows2,catalog_type=catalog(**arguments)
         list_items=[]
-        for item in rows2:
-            list_items.append(item[0])
-        print(" =========================================\n")
+        if catalog_type=='nombres':
+            for item in rows2:
+                list_items.append(item[0])
+        else:
+            for item in rows2:
+                list_items.append(item)
+        print("\n")
         print("The following is the catalog of items: \n")
-        print("{!r} \n ".format(list_items))
-        print("Use the get() function to retrieve the list \n")
-        print(" =========================================")
+        print(" =========================================\n")
+        for i in list_items:
+            print("{!r}".format(i))
+        print("\n")
+        print(" =========================================\n")
+        print("Use the get() function to retrieve the list ... \n")
+        
     elif command=="search":
         rows2=search(**arguments)
         list_items=[]
